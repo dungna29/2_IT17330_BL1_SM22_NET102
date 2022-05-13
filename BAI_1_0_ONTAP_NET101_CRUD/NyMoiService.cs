@@ -56,11 +56,94 @@ namespace BAI_1_0_ONTAP_NET101_CRUD
         {
             foreach (var x in _lstNyMois) x.InRaManHinh();
         }
+        /*
+         * Sửa, Xóa, Tìm kiếm(Tuyệt đối)
+         *
+         */
+        public void TimKiem()
+        {
+            Console.WriteLine("Mời bạn nhập ID: ");
+            _input = Console.ReadLine();
+            for (int i = 0; i < _lstNyMois.Count; i++)
+            {
+                if (_lstNyMois[i].Id==Convert.ToInt16(_input))
+                {
+                    _lstNyMois[i].InRaManHinh();
+                    return;
+                }
+            }
+            Console.WriteLine("Không tìm thấy");
+        }
+        public void Xoa()
+        {
+            // Console.WriteLine("Mời bạn nhập ID: ");
+            // _input = Console.ReadLine();
+            // for (int i = 0; i < _lstNyMois.Count; i++)
+            // {
+            //     if (_lstNyMois[i].Id==Convert.ToInt16(_input))
+            //     {
+            //         _lstNyMois.RemoveAt(i);
+            //         Console.WriteLine("Xóa thành công");
+            //         return;
+            //     }
+            // }
+            // Console.WriteLine("Không tìm thấy");
+            int temp = FindIndexObj();
+            if (temp == -1)
+            {
+                Console.WriteLine("Không tìm thấy");
+                return;
+            }
+            _lstNyMois.RemoveAt(temp);
+            Console.WriteLine("Xóa thành công");
+        }  
+        public void Sua()
+        {
+            // Console.WriteLine("Mời bạn nhập ID: ");
+            // _input = Console.ReadLine();
+            // for (int i = 0; i < _lstNyMois.Count; i++)
+            // {
+            //     if (_lstNyMois[i].Id==Convert.ToInt16(_input))
+            //     {
+            //         Console.WriteLine("Mời bạn nhập lại tên: ");
+            //         _lstNyMois[i].Ten = Console.ReadLine();
+            //         Console.WriteLine("Sửa thành công");
+            //         return;
+            //     }
+            // }
+            // Console.WriteLine("Không tìm thấy");
+            int temp = FindIndexObj();
+            if (temp == -1 )
+            {
+                Console.WriteLine("Không tìm thấy");
+                return;
+            }
+            Console.WriteLine("Mời bạn nhập lại tên: ");
+            _lstNyMois[temp].Ten = Console.ReadLine();
+            Console.WriteLine("Sửa thành công");
+        }
         //Coi phương thức trả về là 1 GIÁ TRỊ hoặc TẬP GIÁ TRỊ
         public string GetInputValue(string msg)
         {
             Console.WriteLine($"Mời bạn nhập {msg}: ");
             return Console.ReadLine();
+        }
+
+        public int FindIndexObj()
+        {
+            Console.WriteLine("Mời bạn nhập ID: ");
+            _input = Console.ReadLine();
+            // for (int i = 0; i < _lstNyMois.Count; i++)
+            // {
+            //     if (_lstNyMois[i].Id == Convert.ToInt16(_input))
+            //     {
+            //         
+            //         return i;
+            //     }
+            // }
+            return _lstNyMois.FindIndex(dungna => dungna.Id == Convert.ToInt16(_input));
+
+
         }
     }
 }
