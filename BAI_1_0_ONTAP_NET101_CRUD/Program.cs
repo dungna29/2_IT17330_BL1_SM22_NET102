@@ -17,6 +17,7 @@ namespace BAI_1_0_ONTAP_NET101_CRUD
             string input;
             do
             {
+                Console.WriteLine(Guid.NewGuid());
                 Console.WriteLine("Quản lý người yêu mới");
                 Console.WriteLine("1. Thêm");
                 Console.WriteLine("2. Sửa");

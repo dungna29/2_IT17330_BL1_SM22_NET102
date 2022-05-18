@@ -32,8 +32,9 @@ namespace BAI_1_0_ONTAP_NET101_CRUD
             int soluong = Convert.ToInt32(GetInputValue("số lượng"));
             for (int i = 0; i < soluong; i++)
             {
+                
                 _nyMoi = new NYMoi();
-                _nyMoi.Id = Convert.ToInt32(GetInputValue("mã"));
+                _nyMoi.Id = GetAuToId();
                 _nyMoi.Ten = GetInputValue("tên");
                 _nyMoi.Ns = Convert.ToInt32(GetInputValue("năm sinh"));
                 _nyMoi.CanNang = Convert.ToDouble(GetInputValue("cân nặng"));
@@ -48,8 +49,11 @@ namespace BAI_1_0_ONTAP_NET101_CRUD
             for (int i = 0; i < soluong; i++)
             {
                 
-                _lstNyMois.Add(new NYMoi(Convert.ToInt32(GetInputValue("mã")), GetInputValue("tên"), Convert.ToDouble(GetInputValue("cân nặng")), Convert.ToInt32(GetInputValue("năm sinh")), Convert.ToDouble(GetInputValue("vòng 3"))));
+                _lstNyMois.Add(new NYMoi(GetAuToId(), GetInputValue("tên"), Convert.ToDouble(GetInputValue("cân nặng")), Convert.ToInt32(GetInputValue("năm sinh")), Convert.ToDouble(GetInputValue("vòng 3"))));
             }
+
+           
+
         }
 
         public void InDanhSash()
@@ -137,13 +141,36 @@ namespace BAI_1_0_ONTAP_NET101_CRUD
             // {
             //     if (_lstNyMois[i].Id == Convert.ToInt16(_input))
             //     {
-            //         
             //         return i;
             //     }
             // }
             return _lstNyMois.FindIndex(dungna => dungna.Id == Convert.ToInt16(_input));
+        }
 
+        public int GetAuToId()
+        {
+            if (_lstNyMois.Count < 0)
+            {
+                return 1;
+            }
+            return _lstNyMois.Max(c => c.Id) + 1;
+        }
 
+        public void Test()
+        {
+            int a = 6;
+            a = 7;
+            a = Convert.ToInt16(phepCong());
+            var maxID = GetLstDoituong();
+        }
+        public string phepCong()
+        {
+            return "5";
+        }
+
+        public List<NYMoi> GetLstDoituong()
+        {
+            return _lstNyMois;
         }
     }
 }
