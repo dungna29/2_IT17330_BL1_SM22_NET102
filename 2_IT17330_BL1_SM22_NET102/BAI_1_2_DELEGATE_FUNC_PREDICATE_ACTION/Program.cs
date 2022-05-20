@@ -58,8 +58,9 @@ namespace BAI_1_2_DELEGATE_FUNC_PREDICATE_ACTION
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.GetEncoding("UTF-8");
+            List<string> lstInt;
 
-            #region Phần 1: Action
+            #region Phần 1: Action - Chỉ đi với phương thức void
 
             Action action;//Tương đương như delegate void tempDelegate();
             Action<string, int> action1;//Tương đương như delegate void tempDelegate(string a, int b);
@@ -67,6 +68,48 @@ namespace BAI_1_2_DELEGATE_FUNC_PREDICATE_ACTION
             action1 = ThongTin3;
             action1?.Invoke("action",1);
             #endregion
+
+            #region Phần 2: Predicate - Chỉ đi với phương thức trả về kiểu bool - Chỉ đi với 1 tham số
+
+            Predicate<string> predicate;//tương đương delegate bool tenDelegate(string a);
+            predicate = CheckChuVietHoa;
+            Console.WriteLine("Chữ Dung có viết hoa hay không? " + predicate.Invoke("Dung"));//== false
+
+            #endregion
+
+            #region Phan 3: Func - Chỉ đi với các phương thức trả về
+            //Kiểu trả về của phương thức nằm ở cuối tham số
+            Func<int, int, int> func1;//tương đương delegate int tenDelegate(int a,int b);
+            func1 = PhepTru;
+            Func<string, int, string, int, double> func2;
+
+            #endregion
+            /*
+            * Bài tập ví dụ:
+            * Viết 4 phương thức để gán được cho các delegate dưới đây
+            * Func<double,double,string,int> funcbt1;
+            * Predicate<string,string,bool> predbt2; // ĐỎ mới đúng
+            * Action<string,int,double> actionbt3;
+            * Func<int,string,string> funcbt4;
+             * Action action2;
+            */
+            Action actions2 = method1;
+        }
+
+        static void method1()
+        {
+            Action<string, int, double> actionbt3 = method2;
+            Func<string, string, bool> predbt2 = method3;
+        }
+
+        static void method2(string a,int b,double c)
+        {
+
+        }
+
+        static bool method3(string a,string b)
+        {
+            return true;
         }
     }
 }
