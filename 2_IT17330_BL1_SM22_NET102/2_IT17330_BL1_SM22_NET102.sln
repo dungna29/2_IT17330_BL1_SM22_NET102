@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAI_2_6_ANONYMOUS_TYPED", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAI_2_7_THAO_TAC_VOI_TAP_TIN_System.IO", "BAI_2_7_THAO_TAC_VOI_TAP_TIN_System.IO\BAI_2_7_THAO_TAC_VOI_TAP_TIN_System.IO.csproj", "{F08A9537-6836-48BD-98A3-F95E9795B899}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAI_2_8_DocGhiDoiTuong", "BAI_2_8_DocGhiDoiTuong\BAI_2_8_DocGhiDoiTuong.csproj", "{3451B6EC-AF20-4F08-9544-561C27246B1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{F08A9537-6836-48BD-98A3-F95E9795B899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F08A9537-6836-48BD-98A3-F95E9795B899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F08A9537-6836-48BD-98A3-F95E9795B899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3451B6EC-AF20-4F08-9544-561C27246B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3451B6EC-AF20-4F08-9544-561C27246B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3451B6EC-AF20-4F08-9544-561C27246B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3451B6EC-AF20-4F08-9544-561C27246B1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

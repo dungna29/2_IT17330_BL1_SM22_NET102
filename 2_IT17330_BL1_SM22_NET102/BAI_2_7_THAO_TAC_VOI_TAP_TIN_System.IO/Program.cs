@@ -83,8 +83,8 @@ namespace BAI_2_7_THAO_TAC_VOI_TAP_TIN_System.IO
             // Console.WriteLine("Parent={0}", di.Parent);
 
             //Create
-            // DirectoryInfo di = new DirectoryInfo(@"C:\fpoly\xyz");
-            // di.Create();
+             DirectoryInfo di = new DirectoryInfo(@"C:\fpoly\xyz");
+             di.Create();
 
             //DirectoryInfo di=new DirectoryInfo(@"D:\");  
             //di.CreateSubdirectory("ajay");
@@ -103,16 +103,16 @@ namespace BAI_2_7_THAO_TAC_VOI_TAP_TIN_System.IO
             // di.CreateSubdirectory(@"fpoly2021\ajay11");
 
             //Delete
-            DirectoryInfo di = new DirectoryInfo(@"C:\fpoly2021");
-            Console.WriteLine("Name:{0}", di.FullName);
-
-            Console.Write("Are you sure to Delete:");
-            string str = Console.ReadLine();
-            if (str == "y")
-            {
-                Directory.Delete(@"C:\fpoly2021", true);
-            }
-            Console.Write("Deleted.....");
+            // DirectoryInfo di = new DirectoryInfo(@"C:\fpoly2021");
+            // Console.WriteLine("Name:{0}", di.FullName);
+            //
+            // Console.Write("Are you sure to Delete:");
+            // string str = Console.ReadLine();
+            // if (str == "y")
+            // {
+            //     Directory.Delete(@"C:\fpoly2021", true);
+            // }
+            // Console.Write("Deleted.....");
         }
 
         #endregion
@@ -121,7 +121,7 @@ namespace BAI_2_7_THAO_TAC_VOI_TAP_TIN_System.IO
 
         static void FileReadWriteAllText()
         {
-            string path = @"C:\Csharp2\dungna.txt";
+            string path = @"C:\Csharp2\dungna29.txt";
             Console.WriteLine(File.ReadAllText(path));
 
             string temp = "Hoc C# vui khong?";
