@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BAI_3_0_LINQ
+namespace BAI_3_1_LINQ_CacCauLenh
 {
     class SanPham
     {
