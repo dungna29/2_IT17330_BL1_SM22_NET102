@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BAI_3_1_LINQ_CacCauLenh
+namespace BAI_3_0_LINQ
 {
     class SanPham
     {
@@ -21,10 +21,7 @@ namespace BAI_3_1_LINQ_CacCauLenh
         public string MoTa { get; set; }
         public int IdTheLoai { get; set; }
         public int IdNhanVien { get; set; }
-
-
-      
-
+        
         public void InRaManHinh()
         {
             Console.WriteLine($"{Id} | {MaSP} | {TenSP} | {MauSac} | {TrongLuong} | {KickThuoc} | {GiaNhap} | {GiaBan} | {NgayTao} | {TrangThai} | {MoTa} | {IdTheLoai} | {IdNhanVien}");

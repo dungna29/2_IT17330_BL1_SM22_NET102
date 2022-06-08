@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{75439B0C-E799-407B-9AD2-E4F85DDD514E}</ProjectGuid>
+    <ProjectGuid>{37B8A20B-5EA4-4C58-AF98-ED1B20653A90}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>BAI_2_9_BEUTHUC_LAMBDA</RootNamespace>
     <AssemblyName>BAI_2_9_BEUTHUC_LAMBDA</AssemblyName>

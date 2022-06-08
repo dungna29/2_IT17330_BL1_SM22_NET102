@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9F9929A7-B0C1-4D0E-BC2A-3FF024FF6B7C}</ProjectGuid>
+    <ProjectGuid>{B26533BF-447F-472E-9BDC-7ADD77427163}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>BAI_3_1_LINQ_CacCauLenh</RootNamespace>
     <AssemblyName>BAI_3_1_LINQ_CacCauLenh</AssemblyName>

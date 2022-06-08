@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace BAI_3_0_LINQ
 {
     internal class Program
     {
+
         #region LINQ là gì
         /*
        *  LINQ: Language Integrated Query
@@ -34,30 +36,33 @@ namespace BAI_3_0_LINQ
         #endregion
         static void Main(string[] args)
         {
+
             string[] arrName = { "Hoa", "Trang", "Dũng", "Long", "Mạnh", "Hoàng", "Tùng", "Lan" };
             List<int> arrNumber = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 };
 
             //Ví dụ 1: Lấy ra những người có tên bắt đầu bằng chữ T
-            // var lstNameChuT = (from a in arrName
-            //     where a.StartsWith("T")
-            //     select a).ToList();
-            foreach (var x in arrName.ToList().Where(c => c.StartsWith("T")))
+            //Cách 1: Có thể dùng cách xử lý chuỗi để lấy dữ liệu theo đầu bài
+            //Cách 2: Dùng LINQ để truy vấn tập giá trị
+            var lstNameChuT =
+                from a in arrName
+                where a.StartsWith("T")
+                select a;
+            foreach (var x in lstNameChuT)
             {
-                Console.WriteLine(x + " ");
+                Console.WriteLine(x);
             }
 
-            //Ví dụ 2: Lấy danh sách các số chẵn trong List số trên
-            var lstSoChan = from a in arrNumber
-                            where a % 2 == 0
-                            select a;
+            //Cách 2: 
+            foreach (var x in arrName.ToList().Where(c=>c.StartsWith("T")))
+            {
+                Console.WriteLine(x);
+            }
 
-            var sortNumber = from a in arrNumber
-                             orderby a // mặc định là ASC
-                             select a;
-
-            var sortNumber1 = from a in arrNumber
-                              orderby a ascending
-                              select a;
+            //Ví dụ 2: Lấy danh sách các số chẵn trong List số ở trên
+            var lstSoChan =
+                from a in arrNumber
+                where a % 2 == 0
+                select a;
         }
     }
 }
