@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BAI_3_1_LINQ_CacCauLenh
 {
-    class TheLoai:IEqualityComparer<TheLoai>
+    class TheLoai
     {
         public int Id { get; set; }
         public string MaTheLoai { get; set; }
@@ -28,9 +28,9 @@ namespace BAI_3_1_LINQ_CacCauLenh
             return x.Id == y.Id && x.MaTheLoai == y.MaTheLoai && x.TenTheLoai == y.TenTheLoai && x.TrangThai == y.TrangThai;
         }
 
-        public int GetHashCode(TheLoai obj)
-        {
-            return HashCode.Combine(obj.Id, obj.MaTheLoai, obj.TenTheLoai, obj.TrangThai);
-        }
+        // public int GetHashCode(TheLoai obj)
+        // {
+        //     return HashCode.Combine(obj.Id, obj.MaTheLoai, obj.TenTheLoai, obj.TrangThai);
+        // }
     }
 }
